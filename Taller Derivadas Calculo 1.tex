@@ -3,16 +3,26 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{amssymb}
-
-
-\title{Taller derivadas Cálculo 1}
-\author{Daniel Orjuela}
-\date{April 2025}
+\usepackage[letterpaper, margin=1in]{geometry}
 
 \begin{document}
 
-\maketitle
+\begin{center}
+    \Large \textbf{Guía N° 8: Derivadas} 
+\end{center}
 
+\vspace{1em}
+
+\textbf{Estudiante:} Daniel Joaquín Orjuela Holguín
+
+\textbf{Código:} 2243134
+
+\textbf{Docente:} Iván Vega
+
+\textbf{Asignatura:} Cálcuo 1
+
+\textbf{Fecha:} 12 de Abril de 2025
+\vspace{2em}
 \begin{center}
     \Large \textbf{Reglas de derivada}
 \end{center}  
@@ -49,7 +59,7 @@
 
     $f^{\prime}(0) =  (e^0*2) + (e^0*5) = 7$
     \vspace{0.5em}
-    \item Si $f$ es una funcíon derivable, encuentre una expresiíon para la derivada de cada una de las siguientes:
+    \item Si $f$ es una funcíon derivable, encuentre una expresíon para la derivada de cada una de las siguientes:
     \begin{enumerate}[label=\alph*)]
         \item $y = x^2f(x)$
         \item $y = \dfrac{x^2}{f(x)}$
@@ -119,6 +129,7 @@
     \[
         P_1 = (-2+\sqrt{3},  \dfrac{1-\sqrt{3}}{2}) \text{ y }  P_2 = (-2-\sqrt{3}, \dfrac{1+\sqrt{3}}{2})
     \]
+    \vspace{1em}
     \item Si $h(2) = 4$ y $h^{\prime}  = -3,$ encuentre:
     \[
         \left.\dfrac{d}{dx}\left[\dfrac{h(x)}{x}\right]\right|_{x=2}
@@ -129,7 +140,7 @@
     \[
         \left.\dfrac{d}{dx}\left[\dfrac{h(x)}{x}\right]\right|_{x=2} = \dfrac{h^{\prime}(2)x - h(2)}{x^2} = \dfrac{-3*2 - 4}{2^2} = \dfrac{-10}{4} = -\dfrac{5}{2}
     \]
-    \par\vspace{2em}
+    \par\vspace{3em}
     $\blacksquare$ Derive las siguientes funciónes:
     \vspace{1em}
     \item $g(x) = \sqrt{x}-2e^x$
@@ -152,6 +163,7 @@
     \vspace{0.5em}
     \item $y = \dfrac{x^2+4x+3}{\sqrt{x}}$
     
+    \vspace{0.5em}
     \textbf{Solucion: }
     \begin{itemize}
         \item $y = (x^2+4x+3)(x^{-1/2})$
@@ -214,15 +226,61 @@
     
     \textbf{Solucion: }
     \begin{itemize}
-        \item $x$
+        \item $f(x) = \dfrac{x^2}{x^2+c}$
+        \item $f^{\prime}(x) = \dfrac{(2x)(x^2+c) - (x^2)(2x)}{(x^2+c)^2}$
+        \item $f^{\prime}(x) = \dfrac{(2x^3+2cx-2x^3)}{(x^2+c)^2}$
+        \item $f^{\prime}(x) = \dfrac{2cx}{(x^2+c)^2}$
     \end{itemize}
     \vspace{0.5em}
         
-    \item $x$
+    \item $g(t) = t^3cos\,t$
     
     \textbf{Solucion: }
     \begin{itemize}
-        \item $x$
+        \item $g^{\prime}(t) = (3t^2)(cos\,t) + (t^3)(-sin\,t)$
+        \item $g^{\prime}(t) = 3t^2\,cos\,t - t^3sin\,t$
+    \end{itemize}
+    \vspace{0.5em}
+        
+    \item $y = \dfrac{x}{cos\,x}$
+    
+    \textbf{Solucion: }
+    \begin{itemize}
+        \item $y^{\prime} = \dfrac{(1)(cos\,x) - (x)(-sin\,x)}{(cos\,x)^2}$
+        \item $y^{\prime} = \dfrac{cos\,x + xsin\,x}{(cos\,x)^2}$
+    \end{itemize}
+    \vspace{0.5em}
+        
+    \item $y = \dfrac{sec\,\theta}{1+sec\,\theta}$
+    
+    \textbf{Solucion: }
+    \begin{itemize}
+        \item $y^{\prime} = \dfrac{[(sec\,\theta \cdot tan\,\theta)(1+sec\,\theta)] - [(sec\,\theta)(sec\,\theta \cdot tan\,\theta)]}{(1+sec\,\theta)^2}$
+        \item $y^{\prime} = \dfrac{sec\,\theta \cdot tan\,\theta}{(1+sec\,\theta)^2}$
+    \end{itemize}
+    \vspace{0.5em}
+    \item $f(x) = xe^x\,csc\,x$  
+    
+    \textbf{Solucion: }
+
+    Agrupamos los términos $ xe^x$, por lo cual definimos que:
+    \begin{itemize}
+        \item g(x) = $xe^x$
+        \item h(x) = $csc\,x$
+    \end{itemize}
+    Redefinimos la función como:
+    \[
+        f(x) = g(x)h(x)
+    \]
+    Y usamos la regla de la cadena y del producto para derivar:
+    \[
+        f^{\prime}(x) = g^{\prime}(x)h(x) + g(x)h^{\prime}(x)
+    \]
+    De este modo, tenemos que:
+    \begin{itemize}
+        \item $f^{\prime}(x) = [(e^x)(csc\,x)] + [(xe^x)(-csc\,x\cdot cot\,x)]$
+        \item $f^{\prime}(x) = e^x\,csc\,x - xe^x\,csc\,x\,cot\,x$
+        \item $f^{\prime}(x) = e^x\,csc\,x(1 - x\,cot\,x)$
     \end{itemize}
     \vspace{0.5em}
 
